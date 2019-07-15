@@ -1,0 +1,150 @@
+object FrmLogin: TFrmLogin
+  Left = 0
+  Top = 0
+  BorderStyle = SizeToolWin
+  Caption = 'Login'
+  ClientHeight = 318
+  ClientWidth = 236
+  FormFactor.Width = 320
+  FormFactor.Height = 480
+  FormFactor.Devices = [Desktop]
+  OnCreate = FormCreate
+  DesignerMasterStyle = 0
+  object RtgFundo: TRectangle
+    Align = Client
+    Fill.Kind = Resource
+    Size.Width = 236.000000000000000000
+    Size.Height = 318.000000000000000000
+    Size.PlatformDefault = False
+    object BtnAcao: TButton
+      Align = Bottom
+      Margins.Left = 50.000000000000000000
+      Margins.Top = 30.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Margins.Bottom = 20.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 276.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 0
+      Text = 'Cadastrar'
+      OnClick = BtnAcaoClick
+    end
+    object EdtEmail: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 1
+      Position.X = 50.000000000000000000
+      Position.Y = 10.000000000000000000
+      Margins.Left = 50.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'E-Mail'
+    end
+    object EdtNome: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 2
+      Position.X = 50.000000000000000000
+      Position.Y = 42.000000000000000000
+      Margins.Left = 50.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Nome'
+    end
+    object EdtNovaSenha: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 3
+      Password = True
+      Position.X = 50.000000000000000000
+      Position.Y = 74.000000000000000000
+      Margins.Left = 50.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Nova Senha'
+    end
+    object EdtSenha: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 4
+      Password = True
+      Position.X = 50.000000000000000000
+      Position.Y = 106.000000000000000000
+      Margins.Left = 50.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Senha'
+    end
+    object EdtSenhaComparacao: TEdit
+      Touch.InteractiveGestures = [LongTap, DoubleTap]
+      Align = Top
+      TabOrder = 5
+      Password = True
+      Position.X = 50.000000000000000000
+      Position.Y = 138.000000000000000000
+      Margins.Left = 50.000000000000000000
+      Margins.Top = 10.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 22.000000000000000000
+      Size.PlatformDefault = False
+      TextPrompt = 'Senha Confirmar'
+    end
+    object RbtAlterarSenha: TRadioButton
+      Tag = 2
+      Align = Bottom
+      Margins.Left = 50.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 227.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 6
+      Text = 'Alterar Senha'
+      OnChange = RadioButtonChange
+    end
+    object RbtCadastrar: TRadioButton
+      Align = Bottom
+      IsChecked = True
+      Margins.Left = 50.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 189.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 7
+      Text = 'Cadastrar'
+      OnChange = RadioButtonChange
+    end
+    object RbtLogin: TRadioButton
+      Tag = 1
+      Align = Bottom
+      Margins.Left = 50.000000000000000000
+      Margins.Right = 50.000000000000000000
+      Position.X = 50.000000000000000000
+      Position.Y = 208.000000000000000000
+      Size.Width = 136.000000000000000000
+      Size.Height = 19.000000000000000000
+      Size.PlatformDefault = False
+      TabOrder = 8
+      Text = 'Login'
+      OnChange = RadioButtonChange
+    end
+  end
+end

@@ -1,0 +1,48 @@
+﻿<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+    <PropertyGroup>
+        <ProjectGuid>{43730B67-61BF-43E4-80FA-A05BD33F4CB4}</ProjectGuid>
+    </PropertyGroup>
+    <ItemGroup>
+        <Projects Include="Singleton.dproj">
+            <Dependencies/>
+        </Projects>
+        <Projects Include="Test\SingletonTests.dproj">
+            <Dependencies/>
+        </Projects>
+    </ItemGroup>
+    <ProjectExtensions>
+        <Borland.Personality>Default.Personality.12</Borland.Personality>
+        <Borland.ProjectType/>
+        <BorlandProject>
+            <Default.Personality/>
+        </BorlandProject>
+    </ProjectExtensions>
+    <Target Name="Singleton">
+        <MSBuild Projects="Singleton.dproj"/>
+    </Target>
+    <Target Name="Singleton:Clean">
+        <MSBuild Projects="Singleton.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="Singleton:Make">
+        <MSBuild Projects="Singleton.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="SingletonTests">
+        <MSBuild Projects="Test\SingletonTests.dproj"/>
+    </Target>
+    <Target Name="SingletonTests:Clean">
+        <MSBuild Projects="Test\SingletonTests.dproj" Targets="Clean"/>
+    </Target>
+    <Target Name="SingletonTests:Make">
+        <MSBuild Projects="Test\SingletonTests.dproj" Targets="Make"/>
+    </Target>
+    <Target Name="Build">
+        <CallTarget Targets="Singleton;SingletonTests"/>
+    </Target>
+    <Target Name="Clean">
+        <CallTarget Targets="Singleton:Clean;SingletonTests:Clean"/>
+    </Target>
+    <Target Name="Make">
+        <CallTarget Targets="Singleton:Make;SingletonTests:Make"/>
+    </Target>
+    <Import Project="$(BDS)\Bin\CodeGear.Group.Targets" Condition="Exists('$(BDS)\Bin\CodeGear.Group.Targets')"/>
+</Project>
